@@ -36,9 +36,13 @@ async function fallbackDashboard() {
   try {
     const file = path.resolve(dirname, "../src/data/listings.json");
     const snapshot = JSON.parse(await fs.readFile(file, "utf8"));
+    const sourceMap = new Map([
+      ...(snapshot.sources || []),
+      ...MANUAL_SOURCE_HEALTH
+    ].map((source) => [`${source.source}:${source.tier}`, source]));
     return {
       ...snapshot,
-      sources: [...(snapshot.sources || []), ...MANUAL_SOURCE_HEALTH],
+      sources: [...sourceMap.values()],
       directory: SOURCE_DIRECTORY
     };
   } catch {
