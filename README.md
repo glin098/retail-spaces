@@ -17,9 +17,9 @@ LoopNet, Crexi, CommercialCafe, CBA, Facebook Marketplace, and additional broker
 
 1. Install dependencies with `npm install`.
 2. Apply [`supabase/migrations/20260725002000_create_retail_space_scout.sql`](supabase/migrations/20260725002000_create_retail_space_scout.sql) to the linked Supabase project.
-3. Add `SUPABASE_URL` (or `NEXT_PUBLIC_SUPABASE_URL`), `SUPABASE_SERVICE_ROLE_KEY`, and `CRON_SECRET` to Vercel. The service-role key is server-only and must never use a `VITE_` prefix.
-4. Deploy. Vercel calls `/api/refresh` at minute 17 every six hours.
-5. Trigger the first run with:
+3. Add `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` as GitHub repository secrets. Add the same values plus `CRON_SECRET` to Vercel. The service-role key is server-only and must never use a `VITE_` prefix.
+4. Deploy. GitHub Actions runs the collector at minute 17 every six hours and writes directly to Supabase. The Vercel project does not require a paid Cron plan.
+5. Trigger the first run from the **Refresh retail spaces** workflow, or call the protected Vercel endpoint:
 
    ```sh
    curl -H "Authorization: Bearer $CRON_SECRET" https://YOUR_DOMAIN/api/refresh
