@@ -48,7 +48,7 @@ async function fallbackDashboard() {
   } catch {
     return {
       generatedAt: null,
-      cadenceHours: 6,
+      cadenceHours: 12,
       market: "Seattle, WA",
       listings: [],
       sources: MANUAL_SOURCE_HEALTH,
@@ -67,7 +67,7 @@ export default async function handler(request, response) {
       return json(response, 200, {
         ok: true,
         databaseConfigured: databaseConfigured(),
-        cadenceHours: 6
+        cadenceHours: 12
       });
     }
     if ((request.method === "GET" || request.method === "POST") && route === "refresh") {

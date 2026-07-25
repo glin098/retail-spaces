@@ -3,7 +3,7 @@ export const SOURCE_DIRECTORY = [
     name: "Craigslist",
     category: "automated",
     searchUrl: "https://seattle.craigslist.org/search/see/off?query=retail&sort=date",
-    note: "Public commercial search; refreshed every six hours."
+    note: "Public commercial search; refreshed every twelve hours."
   },
   {
     name: "Cannon Commercial",

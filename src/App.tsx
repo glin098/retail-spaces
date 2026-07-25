@@ -156,7 +156,7 @@ export default function App() {
       <header className="hero">
         <nav>
           <a className="brand" href="#"><span><Building2 size={19} /></span> Retail Space Scout</a>
-          <div className="navMeta"><span className="pulse" /> Seattle market · 6-hour refresh</div>
+          <div className="navMeta"><span className="pulse" /> Seattle market · 12-hour refresh</div>
         </nav>
         <div className="heroGrid">
           <div>

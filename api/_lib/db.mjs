@@ -146,7 +146,7 @@ export async function getDashboard() {
   }
   return {
     generatedAt: [...latest.values()].map((source) => source.attemptedAt).sort().at(-1) || null,
-    cadenceHours: 6,
+    cadenceHours: 12,
     market: "Seattle, WA",
     listings,
     sources: [...latest.values(), ...MANUAL_SOURCE_HEALTH],

@@ -37,7 +37,7 @@ async function main() {
     .sort((a, b) => b.qualityScore - a.qualityScore || Date.parse(b.lastSeen) - Date.parse(a.lastSeen));
   const snapshot = {
     generatedAt: capturedAt,
-    cadenceHours: 6,
+    cadenceHours: 12,
     market: "Seattle, WA",
     listings,
     sources: [

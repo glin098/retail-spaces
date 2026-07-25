@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-07-25T00:43:28.796Z",
-  "cadenceHours": 6,
+  "cadenceHours": 12,
   "market": "Seattle, WA",
   "listings": [
     {
@@ -1521,7 +1521,7 @@
       "name": "Craigslist",
       "category": "automated",
       "searchUrl": "https://seattle.craigslist.org/search/see/off?query=retail&sort=date",
-      "note": "Public commercial search; refreshed every six hours."
+      "note": "Public commercial search; refreshed every twelve hours."
     },
     {
       "name": "Cannon Commercial",
